@@ -124,7 +124,7 @@ defmodule Geo.WKT.Encoder do
     coordinate_str =
       coordinates
       |> Enum.map(&create_coord_str(&1))
-      |> Enum.join(",")
+      |> Enum.join(", ")
 
     "(#{coordinate_str})"
   end
@@ -133,7 +133,7 @@ defmodule Geo.WKT.Encoder do
     coordinate_str =
       coordinates
       |> Enum.map(&create_line_string_str(&1))
-      |> Enum.join(",")
+      |> Enum.join(", ")
 
     "(#{coordinate_str})"
   end
@@ -142,7 +142,7 @@ defmodule Geo.WKT.Encoder do
     coordinate_str =
       coordinates
       |> Enum.map(&create_polygon_str(&1))
-      |> Enum.join(",")
+      |> Enum.join(", ")
 
     "(#{coordinate_str})"
   end
